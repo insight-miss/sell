@@ -1,6 +1,7 @@
 package com.imooc.sell.form;
 
 import lombok.Data;
+import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotEmpty;
 
@@ -10,6 +11,7 @@ public class OrderForm {
     @NotEmpty(message = "姓名必填")
     private String name;
 
+    @Length(min = 5,max = 12)
     @NotEmpty(message = "手机号必填")
     private String phone;
 
